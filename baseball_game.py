@@ -53,7 +53,6 @@ def main():
         while user_input != random_number:
             user_input = input("Input guess number : ")
             if user_input == "0":
-                play = False
                 break
             if not is_validated_number(user_input):
                 print("Wrong Input, Input again")
@@ -67,7 +66,7 @@ def main():
                             print("Wrong Input, Input again")
                         else:
                             break
-        if is_no(more):
+        if user_input == "0" or is_no(more):
             play = False
     print("Thank you for using this program")
     print("End of the Game")
